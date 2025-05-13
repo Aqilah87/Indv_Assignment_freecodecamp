@@ -1,0 +1,202 @@
+** start of index.html **
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Product Landing Page</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header id="header">
+    <img id="header-img" src="https://cdn.freecodecamp.org/testable-projects-fcc/images/product-landing-page-logo.png" alt="Logo">
+    <nav id="nav-bar">
+      <a class="nav-link" href="#features">Features</a>
+      <a class="nav-link" href="#how-it-works">How It Works</a>
+      <a class="nav-link" href="#pricing">Pricing</a>
+    </nav>
+  </header>
+
+  <section id="hero">
+    <h1>Handcrafted, home-made masterpieces</h1>
+    <form id="form" action="https://www.freecodecamp.com/email-submit">
+      <input id="email" type="email" name="email" placeholder="Enter your email address" required>
+      <input id="submit" type="submit" value="GET STARTED">
+    </form>
+  </section>
+
+  <main>
+    <section id="features">
+      <h2>Premium Materials</h2>
+      <p>Our trombones use the shiniest brass which is sourced locally. This will increase the longevity of your purchase.</p>
+    </section>
+
+    <section>
+      <h2>Fast Shipping</h2>
+      <p>We make sure you receive your trombone as soon as we finish making it. We also provide free returns if you're not satisfied.</p>
+    </section>
+
+    <section>
+      <h2>Quality Assurance</h2>
+      <p>For every purchase, we check and test the pitch and ensure there are no damages.</p>
+    </section>
+
+    <section id="how-it-works">
+      <h2>How It Works</h2>
+      <iframe
+        id="video"
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/y8Yv4pnO7qc"
+        title="Product Demo"
+        frameborder="0"
+        allowfullscreen>
+      </iframe>
+    </section>
+
+    <section id="pricing">
+      <h2>Pricing</h2>
+      <div class="pricing-container">
+        <div class="product">
+          <h3>Tenor Trombone</h3>
+          <p>$600</p>
+          <ul>
+            <li>Lorem ipsum.</li>
+            <li>Lorem ipsum.</li>
+            <li>Lorem ipsum dolor.</li>
+          </ul>
+          <button>SELECT</button>
+        </div>
+        <div class="product">
+          <h3>Bass Trombone</h3>
+          <p>$900</p>
+          <ul>
+            <li>Lorem ipsum.</li>
+            <li>Lorem ipsum.</li>
+            <li>Lorem ipsum dolor.</li>
+          </ul>
+          <button>SELECT</button>
+        </div>
+        <div class="product">
+          <h3>Valve Trombone</h3>
+          <p>$1200</p>
+          <ul>
+            <li>Plays like a trumpet</li>
+            <li>Great for Jazz Bands</li>
+            <li>Lorem ipsum dolor.</li>
+          </ul>
+          <button>SELECT</button>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
+
+
+** end of index.html **
+
+** start of styles.css **
+
+/* Make nav bar fixed at top */
+#nav-bar {
+  display: flex;
+  gap: 20px;
+}
+
+#header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: white; /
+  z-index: 999;
+}
+
+#header-img {
+  height: 50px; 
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding-top: 100px; /* offset for fixed nav */
+  background: #eee;
+}
+
+/* Hero Section */
+#hero {
+  text-align: center;
+  padding: 2rem;
+}
+
+#submit {
+  background-color: #ffc800;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+  margin-top: 0.5rem;
+}
+
+/* Features and Sections */
+main section {
+  padding: 2rem;
+  background: #f9f9f9;
+  margin: 1rem auto;
+  max-width: 900px;
+}
+
+/* Pricing layout using Flexbox */
+.pricing-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.product {
+  background: white;
+  border: 1px solid #ccc;
+  padding: 1rem;
+  width: 250px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.product h3 {
+  background: #eee;
+  padding: 0.5rem;
+  margin: -1rem -1rem 1rem -1rem;
+}
+
+.product button {
+  background: #ffc800;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  .pricing-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #nav-bar {
+    flex-direction: column;
+    align-items: flex-end;
+  }
+}
+
+.nav-link {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+** end of styles.css **
+
